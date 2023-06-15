@@ -3,7 +3,6 @@ import axios from 'axios'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
   const [forms, setForms] = useState<FormData>()
 
   const handleFile = (x: any) => {
@@ -14,17 +13,17 @@ function App() {
     formData.append("image", imageFile)
     console.log(formData.getAll("image"))
     setForms(formData)
-
   }
 
   const handleSub = () => {
     console.log(forms?.getAll('image'))
     const res = axios({
       method: 'post',
+      data: forms,
       url: "https://localhost:7004/WeatherForecast/penis",
       headers: {
         'Content-Type': 'multipart/form-data'
-      }
+      },
     })
     console.log(res)
   }
