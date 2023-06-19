@@ -13,12 +13,12 @@ export const Input = ({
 	const [field, meta, _] = useField(props);
 
 	useEffect(() => {
-		console.log(meta.error)
 		console.log(field.value)
 	}, [field])
 
 	return (
 		<Styled.FieldSet>
+			<label htmlFor={label}>{label}</label>
 			{!file?
 				(
 					<input
@@ -28,8 +28,8 @@ export const Input = ({
 					/>
 				) : (
 					<input
-						{...field}
 						type="file"
+						{...field}
 						{...props}
 					/>
 				)

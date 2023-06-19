@@ -26,7 +26,7 @@ export const InputImage = () => {
 	
 
 	const handleSubmit = (values: ValuesType) => {
-		// console.log(values.imagem);
+		// console.log(values);
 		// console.log(forms?.getAll('image'))
 		// const res = axios.post("https://localhost:7000/Teste/pegardetalheainessabosta", forms).then((res) => setImageUrl(res?.data?.url))
 		// console.log(res)
@@ -48,15 +48,18 @@ export const InputImage = () => {
 					{(props) => (
 						<Form>
 							<Input
+								file
 								label="Arquivo"
 								type="file"
 								name='imagem'
 								id='imagem'
+								value=""
 								accept='image/png, image/jpeg'
 								validarInputs={validarInputs}
 								onChange={(e:ChangeEvent<HTMLInputElement>) => {
-									if(e.currentTarget.files){
-										props.setFieldValue("imagem", e.currentTarget.files[0])
+									console.log(e)
+									if (e.currentTarget.files) {
+										props.setFieldValue("imagem", e.currentTarget.files[0]);
 									}
 								}}
 							/>
