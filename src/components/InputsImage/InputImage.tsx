@@ -49,7 +49,7 @@ export const InputImage = () => {
 						<Form>
 							<Input
 								file
-								label="Arquivo"
+								label="Escolha sua imagem..."
 								type="file"
 								name='imagem'
 								id='imagem'
