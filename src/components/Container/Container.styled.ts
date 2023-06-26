@@ -1,12 +1,9 @@
-import { Box } from "@mui/material";
+import { Container } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
-export const ContainerWrapper = styled(Box)(({ theme }) => ({
-	backgroundColor: theme.palette.grey[200],
+export const ContainerWrapper = styled(Container)(({ theme }) => ({
 	display: 'flex',
 	justifyContent: 'center',
 	alignItems : 'center',
-
-	height: '100vh',
-	width: '100vw',
+	height: '100vh'
 }))

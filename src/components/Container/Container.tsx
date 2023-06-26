@@ -5,7 +5,7 @@ export const Container = ({
 	children
 }: ContainerProps) => {
 	return (
-		<Styled.ContainerWrapper>
+		<Styled.ContainerWrapper maxWidth="lg">
 			{children}
 		</Styled.ContainerWrapper>
 	)
